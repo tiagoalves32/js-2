@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão</title>
+    <style>
+        body {
+            background-color: rgba(245, 220, 77, 0.815);
+            font: normal 18pt sans-serif;
+            color: red;
+        }
+        input {
+            font: normal 15pt sans-serif;
+            color: red;
+        }
+        #res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Divisão:</h1>
+    <input type="number" name="divisor1" id="divisor1">  /
+    <input type="number" name="divisor2" id="divisor2">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res">Resultado:</div>
+
+    <script>
+        function dividir() {
+        var divi1 = window.document.querySelector('#divisor1')
+        var divi2 = window.document.querySelector('#divisor2')
+        var res = window.document.querySelector('#res')
+
+        var n1 = Number(divi1.value)
+        var n2 = Number(divi2.value)
+        var r = n1 / n2
+
+        res.innerHTML = `A divisão entre ${n1} e ${n2} resulta em: ${r}`
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+
+        }
+        input {
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplique os Valores:</h1>
+
+    <input type="number" name="mul1" id="mul1"> *
+    <input type="number" name="mul2" id="mul2">
+    <input type="button" value="Efetue" onclick="efetue()">
+    <div id="res">Resultado:</div>
+
+    <script>
+        function efetue() {
+            var mult1 = window.document.querySelector('#mul1')
+            var mult2 = window.document.querySelector('#mul2')
+            var res = window.document.querySelector('#res')
+            
+            var n1 = Number(mult1.value)
+            var n2 = Number(mult2.value)
+            var x = n1 * n2
+
+            res.innerHTML = `O valor da multiplicação entre ${n1} e ${n2} é: <strong>${x}</strong>`
+        }
+    </script>
+    
+</body>
+</html>
