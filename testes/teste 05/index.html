@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background-color: rgb(199, 8, 17);
+            color: white;
+        }
+        input {
+            font: normal 15pt Arial;
+        }
+        input.especial {
+            background-color: red;
+            color: white;
+            font-family: Monospace;
+        }
+    #msg {
+        width: 450px;
+        height: 150px;
+        padding:30px 10px;
+        border-radius: 15px;
+        margin-top: 20px;
+        background-color: white;
+        color: red;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Controle de Temperatura:</h1> 
+    Temperatura em C°: <input type="text" name="temp" id="temp"> 
+    <input type="button" value="Verificar" class="especial" onclick="verificar()">  
+    <div id="msg"></div>
+
+    <script>
+        function verificar () {
+        var grau = window.document.querySelector('#temp')
+        var mensagem = window.document.querySelector('#msg')
+
+        var val = Number(grau.value)
+
+        msg.innerHTML = `A temperatura atual é de: <strong>${val} C°</strong>`
+        if (val > 60) {
+            msg.innerHTML +=`<p>O seu sistema está <strong>superaquecido,Desligue o PC!!!</strong> </p>`
+        } else {
+            msg.innerHTML += `<p>Temperatura <strong>estável ,Continue navegando</strong></p>`
+        }
+    }
+
+    </script>
+</body>
+</html>
